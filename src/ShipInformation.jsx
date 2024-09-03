@@ -2,11 +2,11 @@ import { useState } from "react";
 const ShipInformation = () => {
 
     const [shipInfo, setShipInfo] = useState(null);
-
   return (
-    <div className="flex justify-center w-full bg-slate-200 border border-l-blue-500 align-middle">
+    <div className="bg-slate-200 border border-blue-500 rounded-lg flex justify-center m-3 ">
         
-        {!shipInfo && <h1 className="text-2xl font-thin">Search for a ship to see more information</h1>}
+        {!shipInfo && <h1 className="lg:text-2xl font-thin p-3">Search for a ship name to see it's information</h1>}
+        {shipInfo}
     </div>
   )
 }
