@@ -4,13 +4,19 @@ import GoogleMaps from './GoogleMaps';
 import ShipInformation from './ShipInformation';
 
 function App() {
+    const handleOnSearchChange = (searchData) => {
+        console.log(searchData);
+    };
+
     return (
-        <div className='flex p-3'>
-            <div className=" flex flex-col  bg-gray-200 ">
-                <Header />
+        <div className="lg:flex-col sm:flex-row justify-center">
+            <div className="flex-col">
+                <Header onSearchChange={handleOnSearchChange} />
                 <GoogleMaps />
             </div>
-            <ShipInformation />
+            <div>
+                <ShipInformation />
+            </div>
         </div>
     );
 }
